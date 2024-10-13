@@ -14,15 +14,8 @@ const notificationRouter = require("./routes/notificationRouter");
 const app = express();
 const port = process.env.PORT || 5015;
 
-// CORS configuration (optional, customize based on your needs)
-const corsOptions = {
-    origin: 'http://localhost:3001', // Replace with your frontend URL
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Allow credentials (if needed)
-};
-
 // Use CORS middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // API routes
